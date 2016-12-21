@@ -1,11 +1,12 @@
 $( function() {
-    $( "#draggable" ).draggable();
+    $( "#element" ).draggable({ containment: "#canvas" });
+    $( "#canvas" ).resizable();
   } );
 
 function changeWidth(){
-    $("#draggable").width($("#tw").val());
+    $("#canvas").width($("#tw").val());
 }
 
 function changeHeight(){
-    $("#draggable").height($("#th").val());
+    $("#canvas").height($("#th").val());
 }
