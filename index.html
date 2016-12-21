@@ -1,5 +1,6 @@
 <html>
     <head>
+        <link rel="stylesheet" href="css/style.css">
         <script src="libs/jquery-3.1.1.js"></script>
         <script src="libs/jquery-ui.js"></script>
         <script src="libs/app.js"></script>
@@ -7,8 +8,7 @@
     <body>
         <div>
             <label>Image size</label>
-            <input type="text" value="300" onchange="changeWidth()"> X <input type="text" value="300" onchange="changeHeight()">
-            <button onclick="setIMG()">Start</button>
+            <input type="text" id="tw" value="300" onchange="changeWidth()"> X <input type="text" value="300" onchange="changeHeight()" id="th">
         </div>
         
         <div id="draggable"></div>
