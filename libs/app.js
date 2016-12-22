@@ -1,6 +1,9 @@
 $( function() {
     $( "#element" ).draggable({ containment: "#canvas" });
     $( "#canvas" ).resizable();
+    $('#canvas').bind('resize', function(){
+            updateSize();
+    });
   } );
 
 function changeWidth(){
@@ -9,4 +12,9 @@ function changeWidth(){
 
 function changeHeight(){
     $("#canvas").height($("#th").val());
+}
+
+function updateSize(){
+    $("#tw").val($("#canvas").width());
+    $("#th").val($("#canvas").height());
 }
