@@ -54,5 +54,5 @@ function render(){
     window.open(canvas.toDataURL(),"toolbar=no");
   }
 });*/
- GrabzIt("ZjQ0MTllZWY0ZDRmNDg5ZTg2Y2JmNTEzZjgzZjJkOGQ=").ConvertHTML("<html><body><h1>Hello World!</h1></body></html>").DataURI();
+ GrabzIt("ZjQ0MTllZWY0ZDRmNDg5ZTg2Y2JmNTEzZjgzZjJkOGQ=").ConvertHTML("<html><body><h1>Hello World!</h1></body></html>").DataURI(callback);
 }
