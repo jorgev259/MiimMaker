@@ -29,8 +29,6 @@ function addText(){
 }
 
 function readIMG(event){
-        $("div.ui-icon-gripsmall-diagonal-se").remove();
-        $("#canvas").css({"border-style":"hidden"});
          var getImagePath = URL.createObjectURL(event.target.files[0]);
          $("#canvas").append("<div class='image' id='image" + imgCount +"'></div>");
          $('#image' + imgCount).css('background-image', 'url(' + getImagePath + ')');
@@ -49,6 +47,8 @@ function element(id){
 }
 
 function render(){
+            $("div.ui-icon-gripsmall-diagonal-se").remove();
+        $("#canvas").css({"border-style":"hidden"});
     html2canvas($("#canvas"), {
   onrendered: function(canvas) {
     console.log(canvas.toDataURL());
