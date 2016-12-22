@@ -10,10 +10,11 @@
         <div id="controls">
             <label>Image size</label>
             <input type="text" id="tw" value="300" onchange="changeWidth()"> X <input type="text" value="300" onchange="changeHeight()" id="th"><br><br>
+            <input type="file" onchange="readIMG(event)"><br><br>
             <button onclick="addText()">Add text box</button><br>
         </div>
         
         <div id="canvas"></div>
-        <div id="element"></div>
+        <div id="image"></div>
     </body>
 </html>

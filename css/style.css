@@ -10,3 +10,16 @@
     width: 50px;
     height:50px;
 }
+
+.text{
+    z-index:705;
+    position: absolute;
+}
+
+.image{
+    width: 100%;
+    height:100%;
+    z-index:700;
+    background-size: cover;
+    position: absolute;
+}

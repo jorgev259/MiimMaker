@@ -1,7 +1,7 @@
 var textCount = 0;
+var imgCount = 0;
 
 $( function() {
-    $( "#element" ).draggable({ containment: "#canvas" });
     $( "#canvas" ).resizable();
     $('#canvas').bind('resize', function(){
             updateSize();
@@ -22,10 +22,18 @@ function updateSize(){
 }
 
 function addText(){
-    $("#canvas").append("<div contenteditable id='t" + textCount +"'></textarea>");
+    $("#canvas").append("<div class='text' contenteditable id='t" + textCount +"'>Sample Text</div>");
     $("#controls").append("TextBox" + textCount + " <input type='color' id='c" + textCount + "' onchange='fontColor(" + textCount + ",this)'><br>")
     element("t" + textCount);
     textCount++;
+}
+
+function readIMG(event){
+         var getImagePath = URL.createObjectURL(event.target.files[0]);
+         $("#canvas").append("<div class='image' id='image" + imgCount +"'></div>");
+         $('#image' + imgCount).css('background-image', 'url(' + getImagePath + ')');
+        element("image" + imgCount);
+        imgCount++;
 }
 
 function fontColor(number,value){
@@ -35,6 +43,5 @@ function fontColor(number,value){
 
 function element(id){
     $("#" + id).draggable({ containment: "#canvas" });
-    $("#" + id).text("Sample Text");
     $("#" + id).resizable();
 }
