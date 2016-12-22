@@ -49,13 +49,8 @@ function element(id){
 function render(){
             $("div.ui-icon-gripsmall-diagonal-se").remove();
         $("#canvas").css({"border-style":"hidden"});
-   /* html2canvas($("#canvas"), {
+   html2canvas($("#canvas"), {
   onrendered: function(canvas) {
     window.open(canvas.toDataURL(),"toolbar=no");
-  }*/
- GrabzIt("ZjQ0MTllZWY0ZDRmNDg5ZTg2Y2JmNTEzZjgzZjJkOGQ=").ConvertHTML("<html><body><h1>Hello World!</h1></body></html>").DataURI(callback);
-}
-
-function callback(){
-    alert(callback);
+  }
 }
