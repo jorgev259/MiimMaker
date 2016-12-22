@@ -7,10 +7,10 @@
         <script src="libs/app.js"></script>
     </head>
     <body>
-        <div>
+        <div id="controls">
             <label>Image size</label>
-            <input type="text" id="tw" value="300" onchange="changeWidth()"> X <input type="text" value="300" onchange="changeHeight()" id="th">
-            
+            <input type="text" id="tw" value="300" onchange="changeWidth()"> X <input type="text" value="300" onchange="changeHeight()" id="th"><br><br>
+            <button onclick="addText()">Add text box</button><br>
         </div>
         
         <div id="canvas"></div>
