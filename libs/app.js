@@ -20,7 +20,7 @@ function updateSize(){
     $("#tw").val($("#canvas").width());
     $("#th").val($("#canvas").height());
 }
-
+//
 function addText(){
     $("#canvas").append("<div class='text' contenteditable id='t" + textCount +"'>Sample Text</div>");
     $("#controls").append("TextBox" + textCount + " <input type='color' id='c" + textCount + "' onchange='fontColor(" + textCount + ",this)'><br>")
