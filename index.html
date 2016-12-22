@@ -4,17 +4,17 @@
         <link rel="stylesheet" href="css/jquery-ui.css">
         <script src="libs/jquery-3.1.1.js"></script>
         <script src="libs/jquery-ui.js"></script>
+        <script src="libs/html2canvas.js"></script>
         <script src="libs/app.js"></script>
     </head>
     <body>
         <div id="controls">
             <label>Image size</label>
             <input type="text" id="tw" value="300" onchange="changeWidth()"> X <input type="text" value="300" onchange="changeHeight()" id="th"><br><br>
-            <input type="file" onchange="readIMG(event)"><br><br>
+            Add Image <input type="file" onchange="readIMG(event)"><br><br>
             <button onclick="addText()">Add text box</button><br>
         </div>
         
         <div id="canvas"></div>
-        <div id="image"></div>
     </body>
 </html>

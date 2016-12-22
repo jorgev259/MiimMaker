@@ -45,3 +45,11 @@ function element(id){
     $("#" + id).draggable({ containment: "#canvas" });
     $("#" + id).resizable();
 }
+
+function render(){
+    html2canvas($("#canvas"), {
+  onrendered: function(canvas) {
+    console.log(canvas.toDataURL());
+  }
+});
+}
