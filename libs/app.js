@@ -51,7 +51,7 @@ function render(){
         $("#canvas").css({"border-style":"hidden"});
     html2canvas($("#canvas"), {
   onrendered: function(canvas) {
-    console.log(canvas.toDataURL());
+    window.open(canvas.toDataURL(),"toolbar=no");
   }
 });
 }
